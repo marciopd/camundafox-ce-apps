@@ -13,6 +13,7 @@ After running the script, you can access the Activiti explorer at: http://localh
 	sh installCamundaFoxPlatform.sh
 
 The environment will be installed in:
+
 	 ~/camunda-fox-tests-env/
 
 # Maven 
@@ -106,5 +107,7 @@ and then copy the generated WAR or EAR to
 
 # Contents
 This repository contains:
+- BOM and parent projects to process application and service clients;
 - maven archetype to process applications packaged as WAR;
-- example process applications to Camunda Fox CE Platform (http://www.camunda.com/);
+- example process applications to Camunda Fox CE Platform (http://www.camunda.com/):
+	- calculatorws-process:  bpmn process which invokes two simple services tasks, a Hello world Task and a Calculator webservice task.
