@@ -64,7 +64,7 @@
 
 			<!-- Calculator WS client -->
 			<dependency>
-				<groupId>br.com.marciopd.bpm.client</groupId>
+				<groupId>br.com.marciopd.bpm</groupId>
 				<artifactId>calculatorws-client</artifactId>
 				<version>${calculatorws-client.version}</version>
 			</dependency>
