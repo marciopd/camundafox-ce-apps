@@ -2,7 +2,7 @@
 
 This repository contains examples of JEE6 maven process applications running on Camunda FOX CE platform (http://www.camunda.com/).
 
-My goal is to study the BPMS Camunda Fox/Activiti acting as a process manager (http://www.eaipatterns.com/ProcessManager.html) and really orchestrating services in a SOA/BPM environment.
+My goal is to study the BPMS Camunda Fox/Activiti acting as a process manager (http://www.eaipatterns.com/ProcessManager.html) orchestrating human tasks and services in a SOA/BPM environment.
 
 # Camunda Fox CE Platform
 
