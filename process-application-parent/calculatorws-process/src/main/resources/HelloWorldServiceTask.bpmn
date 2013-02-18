@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="calculatorws-process" name="calculatorws-process">
+    <startEvent id="startevent1" name="Start"></startEvent>
+    <serviceTask id="helloWorldTask" name="Service Hello World Task" activiti:expression="#{helloWorldService.sayHello()}"></serviceTask>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <sequenceFlow id="flow1" name="" sourceRef="startevent1" targetRef="helloWorldTask"></sequenceFlow>
+    <serviceTask id="addNumbersTask" name="Add Numbers Task" activiti:expression="#{calculatorService.add(10, 15)}"></serviceTask>
+    <sequenceFlow id="flow2" name="" sourceRef="helloWorldTask" targetRef="addNumbersTask"></sequenceFlow>
+    <sequenceFlow id="flow3" name="" sourceRef="addNumbersTask" targetRef="endevent1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_processHelloWorldServiceTask">
+    <bpmndi:BPMNPlane bpmnElement="processHelloWorldServiceTask" id="BPMNPlane_processHelloWorldServiceTask">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35" width="35" x="100" y="180"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="helloWorldTask" id="BPMNShape_helloWorldTask">
+        <omgdc:Bounds height="55" width="105" x="226" y="170"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35" width="35" x="660" y="180"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="addNumbersTask" id="BPMNShape_addNumbersTask">
+        <omgdc:Bounds height="55" width="105" x="430" y="170"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="135" y="197"></omgdi:waypoint>
+        <omgdi:waypoint x="226" y="197"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="331" y="197"></omgdi:waypoint>
+        <omgdi:waypoint x="430" y="197"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="535" y="197"></omgdi:waypoint>
+        <omgdi:waypoint x="660" y="197"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
