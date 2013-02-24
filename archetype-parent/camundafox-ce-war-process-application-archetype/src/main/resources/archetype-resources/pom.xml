@@ -6,7 +6,7 @@
 	<packaging>war</packaging>
 
 	<parent>
-		<groupId>br.com.marciopd.bpm</groupId>
+		<groupId>br.com.marciopd.bpm.app</groupId>
 		<artifactId>process-application-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
