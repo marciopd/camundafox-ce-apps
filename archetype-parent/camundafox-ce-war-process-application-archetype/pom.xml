@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>br.com.marciopd.bpm.archetype</groupId>
 		<artifactId>archetype-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 	</parent>
 
 	<name>camundafox-ce-war-process-application-archetype</name>
