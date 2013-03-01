@@ -10,6 +10,7 @@
 
 	<modules>
 		<module>bom-parent</module>
+		<module>buildtools-parent</module>
 		<module>service-client-parent</module>
 		<module>process-application-parent</module>
 		<module>archetype-parent</module>
