@@ -5,8 +5,39 @@
 	<artifactId>bom-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
+	<repositories>
+		<!-- jboss release repo -->
+		<repository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Maven Repository Group</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+
+		<!-- primefaces repository -->
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+
+		<!-- Camundafox repository -->
+		<repository>
+			<id>camunda-fox-ce</id>
+			<url>https://app.camunda.com/nexus/content/repositories/fox-ce/</url>
+		</repository>
+	</repositories>
+
 	<modules>
-	  <module>process-application-bom</module>
+		<module>process-application-bom</module>
 	</modules>
 </project>

@@ -34,67 +34,6 @@ The environment will be installed in:
 
 The applications use Maven 3.
 
-## Add repos to settings.xml
-
-Put the following repositories in '~/.m2/settings.xml' as in the example file below:
-
-
-
-	<?xml version="1.0" encoding="UTF-8"?>
-
-	<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-	          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-	
-	
-	  <profiles>
-	
-	    <profile>
-	      <id>default</id>
-	
-	      <activation>
-	        <activeByDefault/>
-	      </activation>
-	
-	      <repositories>
-		<!-- jboss release repo -->
-		<repository>
-			<id>jboss-public-repository-group</id>
-			<name>JBoss Public Maven Repository Group</name>
-			<url>https://repository.jboss.org/nexus/content/groups/public/</url>
-			<layout>default</layout>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	
-		<!-- primefaces repository -->
-		<repository>
-			<id>prime-repo</id>
-			<name>PrimeFaces Maven Repository</name>
-			<url>http://repository.primefaces.org</url>
-			<layout>default</layout>
-		</repository>
-	
-		<!-- Camundafox repository -->
-		<repository>
-			<id>camunda-fox-ce</id>
-			<url>https://app.camunda.com/nexus/content/repositories/fox-ce/</url>
-		</repository>
-	      </repositories>
-	    </profile>
-	  </profiles>
-	
-	  <activeProfiles>
-	    <activeProfile>default</activeProfile>
-	  </activeProfiles>
-	
-	</settings>
-
 ## Install projects and archetypes
 
 In the root directory of the repo, type:
