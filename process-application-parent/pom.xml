@@ -5,6 +5,9 @@
 	<artifactId>process-application-parent</artifactId>
 	<packaging>pom</packaging>
 
+	<name>Parent of process applications.</name>
+	<description>Project to group process applications.</description>
+
 	<parent>
 		<groupId>br.com.marciopd.bpm.bom</groupId>
 		<artifactId>process-application-bom</artifactId>
@@ -29,6 +32,16 @@
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- Code quality checks during build -->
+			<!-- Checkstyle -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<dependencies>
 					<dependency>
@@ -38,12 +51,44 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+			<!-- Cobertura -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<configuration>
+					<check>
+						<haltOnFailure>true</haltOnFailure>
+						<branchRate>85</branchRate>
+						<lineRate>85</lineRate>
+						<totalBranchRate>85</totalBranchRate>
+						<totalLineRate>85</totalLineRate>
+					</check>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>clean</goal>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
 	<!-- reporting -->
 	<reporting>
 		<plugins>
+			<!-- JRX -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>${maven-jxr-plugin.version}</version>
+				<configuration>
+					<aggregate>true</aggregate>
+				</configuration>
+			</plugin>
+			<!-- Checkstyle -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
@@ -51,6 +96,12 @@
 				<configuration>
 					<configLocation>checkstyle-resources/checkstyle.xml</configLocation>
 				</configuration>
+			</plugin>
+			<!-- Cobertura -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>${cobertura-maven-plugin.version}</version>
 			</plugin>
 			<!-- PMD -->
 			<plugin>
@@ -60,6 +111,18 @@
 				<configuration>
 					<linkXRef>true</linkXRef>
 				</configuration>
+			</plugin>
+			<!-- Findbugs -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>${findbugs-maven-plugin.version}</version>
+			</plugin>
+			<!-- Taglist -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>taglist-maven-plugin</artifactId>
+				<version>${taglist-maven-plugin.version}</version>
 			</plugin>
 		</plugins>
 	</reporting>
