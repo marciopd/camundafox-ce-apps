@@ -1,15 +1,3 @@
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
-- [Intro](#intro)
-- [Camunda Fox CE Platform](#camunda-fox-ce-platform)
-- [Maven](#maven)
-	- [Version](#version)
-	- [Add repos to settings.xml](#add-repos-to-settingsxml)
-	- [Install projects and archetypes](#install-projects-and-archetypes)
-	- [Using archetypes](#using-archetypes)
-	- [Deploying process applications](#deploying-process-applications)
-- [Contents](#contents)
-
 # Intro
 
 This repository contains examples of JEE6 maven process applications running on Camunda FOX CE platform (http://www.camunda.com/).
